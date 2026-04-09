@@ -5,7 +5,7 @@
 RLCamera rlc;
 
 void Setup(AlxWindow* w){
-    rlc = RLCamera_New(RLCAMERA_DEVICE,RLCAMERA_WIDTH * 2,RLCAMERA_HEIGHT * 2);
+    rlc = RLCamera_New(RLCAMERA_DEVICE,1920,1080);
 
     //RLCamera_JPEG_Save(&rlc,"Bild.jpg");
     //window.Running = 0;
@@ -31,7 +31,7 @@ void Delete(AlxWindow* w){
 }
 
 int main(){
-    if(Create("Camera Test",840,680,1,1,Setup,Update,Delete))
+    if(Create("Camera Test",1920,1080,1,1,Setup,Update,Delete))
         Start();
     return 0;
 }
